@@ -2,11 +2,15 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-COPY GazelServices.csproj ./
-RUN dotnet restore
+# copy csproj and restore
+COPY GazelServices/GazelServices.csproj ./GazelServices/
+RUN dotnet restore ./GazelServices/GazelServices.csproj
 
-COPY . ./
-RUN dotnet publish -c Release -o /app/publish /p:UseAppHost=false
+# copy the rest
+COPY . .
+
+# publish
+RUN dotnet publish ./GazelServices/GazelServices.csproj -c Release -o /app/publish /p:UseAppHost=false
 
 # --- runtime stage ---
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
