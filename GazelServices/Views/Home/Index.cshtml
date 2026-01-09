@@ -1,0 +1,92 @@
+﻿<section class="hero">
+    <div class="container">
+        <h1>Грузоперевозки Газель</h1>
+        <p class="hero-text">
+            Грузоперевозки, утилизация мебели, демонтаж,
+            монтаж сантехники и косметический ремонт
+        </p>
+        <div class="phones">
+            <a>8 (900) 212-41-24</a>
+            <a>92-41-24-14</a>
+        </div>
+    </div>
+</section>
+
+<section class="order">
+    <div class="container">
+        <h2>Оставить заказ</h2>
+        <p class="order-subtitle">Заполните поля — мы перезвоним и уточним детали</p>
+
+        <form class="order-form" id="orderForm" asp-controller="Order" asp-action="Send" method="post">
+            @Html.AntiForgeryToken()
+
+            <div class="order-grid">
+                <div class="field">
+                    <label for="fromCity">Город погрузки</label>
+                    <input id="fromCity" name="FromCity" type="text" placeholder="Например: Омск" required>
+                </div>
+
+                <div class="field">
+                    <label for="toCity">Город доставки</label>
+                    <input id="toCity" name="ToCity" type="text" placeholder="Например: Новосибирск" required>
+                </div>
+
+                <div class="field">
+                    <label for="weight">Примерный вес груза (кг)</label>
+                    <input id="weight" name="Weight" type="number" min="0" step="0.1" placeholder="Например: 350"
+                        required>
+                </div>
+
+                <div class="field">
+                    <label for="phone">Номер телефона</label>
+                    <input id="phone" name="Phone" type="tel" placeholder="+7 (___) ___-__-__" required>
+                </div>
+            </div>
+
+            <button class="order-btn" type="submit">Оставить заказ</button>
+            <div class="order-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</div>
+        </form>
+    </div>
+</section>
+
+
+
+<section class="services">
+    <div class="container">
+        <h2>Наши услуги</h2>
+
+        <div class="service-list">
+            <div class="service-card reveal">
+                <img src="~/icons/truck.svg" alt="Грузоперевозки">
+                <div class="text">Грузоперевозки (Газель)</div>
+            </div>
+
+            <div class="service-card reveal">
+                <img src="~/icons/furniture.svg" alt="Утилизация мебели">
+                <div class="text">Утилизация мебели</div>
+            </div>
+
+            <div class="service-card reveal">
+                <img src="~/icons/Hammer.svg" alt="Демонтажные работы">
+                <div class="text">Демонтажные работы</div>
+            </div>
+
+            <div class="service-card reveal">
+                <img src="~/icons/Plumbing.svg" alt="Монтаж сантехники">
+                <div class="text">Монтаж сантехники</div>
+            </div>
+
+            <div class="service-card reveal">
+                <img src="~/icons/Repair.svg" alt="Косметический ремонт">
+                <div class="text">Косметический ремонт</div>
+            </div>
+
+            <div class="service-card reveal">
+                <img src="~/icons/Other.svg" alt="Другие работы">
+                <div class="text">Другие работы</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</section>

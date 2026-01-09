@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #222;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.order {
+    padding: 50px 0;
+    background: #f7f7f7;
+}
+
+.order h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.order-subtitle {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.order-form {
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.order-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.field label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.field input {
+    width: 100%;
+    padding: 14px 14px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input:focus {
+    border-color: #ffd200;
+    box-shadow: 0 0 0 3px rgba(255, 210, 0, 0.25);
+}
+
+.order-btn {
+    width: 100%;
+    padding: 16px 18px;
+    background: #ffd200;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.order-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.order-note {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #777;
+    text-align: center;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .order-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+.header {
+    background: #1e1e1e;
+    color: #fff;
+}
+
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.phone-top {
+    color: #ffd200;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.hero {
+    position: relative;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url('/images/hero-bg.jpg') center / cover no-repeat;
+    padding: 70px 0;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.hero-text {
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-width: 700px;
+}
+
+.phones a {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 15px 30px;
+    background: #ffd200;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+
+.services {
+    padding: 50px 0;
+    background: #ffffff;
+}
+
+.services h2 {
+    font-size: 32px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background: #f7f7f7;
+    border: 2px solid transparent;
+    padding: 30px 20px;
+    text-align: center;
+    cursor: default;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.service-card .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.service-card .text {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    background: #ffffff;
+    border-color: #ffd200;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-card img {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 15px;
+    color: #000;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.service-card:hover img {
+    transform: scale(1.15);
+    color: #ffd200;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}

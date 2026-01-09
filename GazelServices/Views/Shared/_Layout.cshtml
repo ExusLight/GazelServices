@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Грузоперевозки Газель</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    <header class="header">
+    </header>
+
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <div class="footer-logo">Грузоперевозки Газель</div>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-title">Контакты:</div>
+                <a href="tel:89002124124" class="footer-phone">
+                    8 (900) 212-41-24
+                </a>
+                ,
+                <a href="tel:92412414" class="footer-phone">
+                    92-41-24-14
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const reveals = document.querySelectorAll(".reveal");
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const form = e.target;
+
+            const fd = new FormData(form);
+
+            // anti-forgery token
+            const token = form.querySelector('input[name="__RequestVerificationToken"]')?.value;
+
+            const res = await fetch(form.action, {
+                method: 'POST',
+                body: fd,
+                headers: token ? { 'RequestVerificationToken': token } : {}
+            });
+
+            const data = await res.json().catch(() => ({}));
+
+            if (res.ok && data.ok) {
+                alert('Заявка отправлена! Мы скоро перезвоним.');
+                form.reset();
+            } else {
+                alert('Не удалось отправить заявку. Проверьте поля или попробуйте позже.');
+            }
+        });
+    </script>
+
+</body>
+
+
+</html>

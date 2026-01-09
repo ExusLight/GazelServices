@@ -1,0 +1,95 @@
+/* _content/GazelServices/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-rvr3vdk2t1] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-rvr3vdk2t1] {
+  color: #0077cc;
+}
+
+.btn-primary[b-rvr3vdk2t1] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-rvr3vdk2t1], .nav-pills .show > .nav-link[b-rvr3vdk2t1] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-rvr3vdk2t1] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-rvr3vdk2t1] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-rvr3vdk2t1] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-rvr3vdk2t1] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-rvr3vdk2t1] {
+    background: #1e1e1e;
+    color: #cccccc;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+
+.footer-content[b-rvr3vdk2t1] {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-logo[b-rvr3vdk2t1] {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.footer-copy[b-rvr3vdk2t1] {
+    font-size: 14px;
+    color: #aaaaaa;
+}
+
+.footer-title[b-rvr3vdk2t1] {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.footer-phone[b-rvr3vdk2t1] {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffd200;
+    text-decoration: none;
+    margin-bottom: 6px;
+}
+
+.footer-phone:hover[b-rvr3vdk2t1] {
+    text-decoration: underline;
+}
+
+.footer-note[b-rvr3vdk2t1] {
+    font-size: 14px;
+    color: #aaaaaa;
+    margin-top: 8px;
+}
+
