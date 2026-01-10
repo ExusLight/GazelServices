@@ -14,3 +14,5 @@
 
 # Logs
 *.log
+**/appsettings.Development.json
+
